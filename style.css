@@ -28,7 +28,7 @@ body {
 header {
   background: linear-gradient(90deg, #1a3c5e, #2a6d9e);
   color: #fff;
-  padding: 15px 0; /* Reduced padding for a tighter look */
+  padding: 15px 0;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -37,38 +37,40 @@ header {
 
 header .container {
   display: flex;
-  justify-content: flex-end; /* Changed from space-between to flex-end */
-  align-items: center;
+  justify-content: center; /* Center the navigation bar */
   width: 100%;
-  padding: 0 20px; /* Added horizontal padding to move elements away from edges */
+  padding: 0 20px;
   box-sizing: border-box;
+  max-width: 1400px; /* Increased from 1200px to provide more space */
 }
 
-/* Removed header h1 styles since title is no longer in header */
-
 header nav {
-  /* Removed margin-left: auto since we're already aligning to flex-end */
+  width: 100%; /* Take full available width */
 }
 
 header nav ul {
   display: flex;
-  gap: 50px; /* Increased spacing between navigation items */
+  gap: 30px; /* Reduced spacing to prevent wrapping */
   padding: 0;
   margin: 0;
   list-style: none;
-  justify-content: flex-end; /* Aligns items to the right */
+  justify-content: space-between; /* Distributes items evenly */
+  flex-wrap: nowrap; /* Prevents wrapping to next line */
+  width: 100%;
+}
+
+header nav ul li {
+  white-space: nowrap; /* Prevents text wrapping within each menu item */
 }
 
 header nav ul li a {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1rem; /* Standard font size for clarity */
+  font-size: 0.95rem; /* Slightly reduced font size */
   transition: color 0.3s ease;
-}
-
-header nav ul li a:hover {
-  color: #ffd700;
+  display: inline-block; /* Helps with spacing */
+  padding: 5px 0;
 }
 
 /* Hero Image Section */
@@ -178,6 +180,22 @@ footer p {
 }
 
 /* Responsive Design */
+@media (max-width: 1100px) {
+  header nav ul {
+    gap: 15px; /* Further reduced spacing on smaller screens */
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  }
+
+  header nav ul li {
+    margin: 5px 8px;
+  }
+  
+  header nav ul li a {
+    font-size: 0.9rem;
+  }
+}
+
 @media (max-width: 768px) {
   header .container {
     flex-direction: column;
@@ -186,12 +204,10 @@ footer p {
     padding: 0 10px; /* Reduce padding on mobile for tighter layout */
   }
 
-  /* Removed header h1 mobile styles */
-
   header nav ul {
     flex-wrap: wrap; /* Allows items to wrap on smaller screens */
-    gap: 15px; /* Increased from 10px to 15px */
-    justify-content: center; /* Keeps nav items centered on mobile */
+    gap: 12px; /* Reduced from 15px */
+    justify-content: center;
   }
 
   header nav ul li a {
