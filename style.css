@@ -37,26 +37,26 @@ header {
 
 header .container {
   display: flex;
-  justify-content: space-between; /* Pushes h1 to left and nav to right */
+  justify-content: flex-end; /* Changed from space-between to flex-end */
   align-items: center;
-  width: 100%; /* Ensure container uses full width of header */
-  padding: 0px; /* Add padding to the container sides to match body padding */
-  box-sizing: border-box; /* Ensure padding doesn't exceed width */
+  width: 100%;
+  padding: 0 20px; /* Added horizontal padding to move elements away from edges */
+  box-sizing: border-box;
 }
 
-header h1 {
-  font-size: 1.2rem; /* Reduced from 1.8rem to 1.5rem */
-  font-weight: 500;
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove any padding to align flush with edge */
+/* Removed header h1 styles since title is no longer in header */
+
+header nav {
+  /* Removed margin-left: auto since we're already aligning to flex-end */
 }
 
 header nav ul {
   display: flex;
-  gap: 35px; /* Increased spacing between items for better balance */
-  padding: 0; /* Removed padding to avoid extra space */
+  gap: 50px; /* Increased spacing between navigation items */
+  padding: 0;
   margin: 0;
   list-style: none;
+  justify-content: flex-end; /* Aligns items to the right */
 }
 
 header nav ul li a {
@@ -100,9 +100,10 @@ header nav ul li a:hover {
   max-width: 800px;
 }
 
-.hero-text h2 {
+.hero-text h1 {
   font-size: 2rem;
   margin-bottom: 10px;
+  color: #fff;
 }
 
 .hero-text p {
@@ -185,11 +186,7 @@ footer p {
     padding: 0 10px; /* Reduce padding on mobile for tighter layout */
   }
 
-  header h1 {
-    font-size: 1.3rem; /* Further reduce for mobile */
-    text-align: left; /* Ensure left alignment on mobile */
-    padding: 0; /* Remove padding for flush alignment */
-  }
+  /* Removed header h1 mobile styles */
 
   header nav ul {
     flex-wrap: wrap; /* Allows items to wrap on smaller screens */
@@ -205,7 +202,7 @@ footer p {
     max-width: 100%; /* Ensures image fits smaller screens */
   }
 
-  .hero-text h2 {
+  .hero-text h1 {
     font-size: 1.5rem;
   }
 
