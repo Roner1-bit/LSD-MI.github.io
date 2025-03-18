@@ -72,11 +72,11 @@ header nav ul li a:hover {
 }
 
 .hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+  max-width: 100%; /* Keeps the image within its natural size */
+  height: auto; /* Preserves the aspect ratio */
+  object-fit: contain; /* Prevents stretching or cropping */
 }
+
 
 .hero-text {
   position: absolute;
