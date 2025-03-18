@@ -28,7 +28,7 @@ body {
 header {
   background: linear-gradient(90deg, #1a3c5e, #2a6d9e);
   color: #fff;
-  padding: 20px 0;
+  padding: 15px 0; /* Reduced padding for a tighter look */
   position: sticky;
   top: 0;
   z-index: 100;
@@ -48,14 +48,17 @@ header h1 {
 
 header nav ul {
   display: flex;
-  justify-content: space-between; /* Spreads items evenly across the width */
-  padding: 0 20px; /* Adds padding on both sides */
+  gap: 25px; /* Increased spacing between items for better balance */
+  padding: 0; /* Removed padding to avoid extra space */
+  margin: 0;
+  list-style: none;
 }
 
 header nav ul li a {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
+  font-size: 1rem; /* Standard font size for clarity */
   transition: color 0.3s ease;
 }
 
@@ -67,16 +70,16 @@ header nav ul li a:hover {
 .hero-image {
   position: relative;
   width: 100%;
-  height: 500px;
-  overflow: hidden;
+  text-align: center; /* Center the image */
 }
 
 .hero-image img {
-  max-width: 100%; /* Keeps the image within its natural size */
-  height: auto; /* Preserves the aspect ratio */
-  object-fit: contain; /* Prevents stretching or cropping */
+  width: 100%;
+  max-width: 900px; /* Caps the width to prevent stretching and quality loss */
+  height: auto; /* Maintains aspect ratio */
+  display: block;
+  margin: 0 auto; /* Centers the image */
 }
-
 
 .hero-text {
   position: absolute;
@@ -129,7 +132,8 @@ section h3 {
   margin-bottom: 10px;
 }
 
-section p, section ul {
+section p,
+section ul {
   font-size: 1.1rem;
   margin-bottom: 20px;
 }
@@ -176,16 +180,21 @@ footer p {
 
   header h1 {
     font-size: 1.5rem;
-  }
-
-  header nav ul {
-    flex-direction: column;
-    gap: 10px;
     text-align: center;
   }
 
-  .hero-image {
-    height: 300px;
+  header nav ul {
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    gap: 10px;
+    justify-content: center;
+  }
+
+  header nav ul li a {
+    font-size: 0.9rem;
+  }
+
+  .hero-image img {
+    max-width: 100%; /* Ensures image fits smaller screens */
   }
 
   .hero-text h2 {
@@ -204,7 +213,8 @@ footer p {
     font-size: 1.3rem;
   }
 
-  section p, section ul {
+  section p,
+  section ul {
     font-size: 1rem;
   }
 }
