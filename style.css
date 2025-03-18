@@ -48,7 +48,7 @@ header h1 {
 
 header nav ul {
   display: flex;
-  gap: 25px; /* Increased spacing between items for better balance */
+  gap: 35px; /* Increased spacing between items for better balance */
   padding: 0; /* Removed padding to avoid extra space */
   margin: 0;
   list-style: none;
