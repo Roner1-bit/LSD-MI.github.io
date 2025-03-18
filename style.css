@@ -37,13 +37,15 @@ header {
 
 header .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Pushes h1 to left and nav to right */
   align-items: center;
 }
 
 header h1 {
-  font-size: 1.8rem;
+  font-size: 1.5rem; /* Reduced from 1.8rem to 1.5rem */
   font-weight: 700;
+  margin: 0; /* Remove default margin to align flush with edge */
+  padding-left: 10px; /* Optional: Add slight padding if needed */
 }
 
 header nav ul {
@@ -176,17 +178,18 @@ footer p {
   header .container {
     flex-direction: column;
     gap: 10px;
+    text-align: left; /* Ensures title stays left-aligned */
   }
 
   header h1 {
-    font-size: 1.5rem;
-    text-align: center;
+    font-size: 1.3rem; /* Further reduce for mobile */
+    text-align: left; /* Ensure left alignment on mobile */
   }
 
   header nav ul {
     flex-wrap: wrap; /* Allows items to wrap on smaller screens */
-    gap: 10px;
-    justify-content: center;
+    gap: 15px; /* Increased from 10px to 15px */
+    justify-content: center; /* Keeps nav items centered on mobile */
   }
 
   header nav ul li a {
