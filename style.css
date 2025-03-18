@@ -40,7 +40,7 @@ header .container {
   justify-content: space-between; /* Pushes h1 to left and nav to right */
   align-items: center;
   width: 100%; /* Ensure container uses full width of header */
-  padding: 0 10px; /* Add padding to the container sides to match body padding */
+  padding: 0px; /* Add padding to the container sides to match body padding */
   box-sizing: border-box; /* Ensure padding doesn't exceed width */
 }
 
